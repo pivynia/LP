@@ -1,6 +1,7 @@
 class Queue {
-    char[] q;
-    int putloc, getloc;
+    private char[] q;
+    private int putloc;
+    private int getloc;
 
     Queue(int size) {
         q = new char[size];
@@ -33,14 +34,16 @@ class QDemo {
 
         System.out.println("Использование bigQ для сохранения алфавита.");
 
-        for(i = 0; i < 26; i++)
+        for(i = 0; i < 26; i++) {
             bigQ.put((char) ('A' + i));
+        }
 
         System.out.print("Содержимое bigQ: ");
         for(i = 0; i < 26; i++) {
             ch = bigQ.get();
-            if(ch != (char) 0)
+            if(ch != (char) 0) {
                 System.out.print(ch);
+            }
         }
 
         System.out.println("\n");
@@ -57,8 +60,9 @@ class QDemo {
         System.out.print("Содержимое smallQ: ");
         for(i = 0; i < 5; i++) {
             ch = smallQ.get();
-            if(ch != (char) 0)
+            if(ch != (char) 0) {
                 System.out.print(ch);
+            }
         }
         System.out.println();
     }
